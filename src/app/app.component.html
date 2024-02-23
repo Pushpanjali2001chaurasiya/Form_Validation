@@ -1,0 +1,17 @@
+<h1>EMAIL VALIDATION</h1>
+
+  <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    Email:<input type="text" placeholder="Enter Email" formControlName="Email">
+    @if(Email?.invalid && (Email?.dirty || Email?.touched)){
+      @if(Email?.errors?.['required']){
+        <span>Email required</span>
+      }
+    }
+    Password:<input type="password" placeholder="Enter Password" formControlName="Password">
+    @if(Password?.invalid && (Password?.dirty || Password?.touched)){
+      @if(Password?.errors?.['required']){
+        <span>password must be 10 character</span>
+      }
+    }
+    <button type="submit" [disabled]="!loginform.valid">Login</button>
+  </form>

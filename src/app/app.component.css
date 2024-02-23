@@ -1,0 +1,26 @@
+form{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: azure;
+    cursor: pointer;
+
+}
+button:disabled{
+    background-color: aqua;
+    color-scheme: black;
+    cursor: pointer;
+}
